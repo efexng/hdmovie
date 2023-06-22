@@ -1,0 +1,123 @@
+:root {
+    --nav-title-font-size: 2.5rem;
+    --nav-title-font-weight: bold;
+    --nav-link-font-weight: 300;
+}
+
+.header-title {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: var(--nav-title-font-size);
+    font-weight: var(--nav-title-font-weight);
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+
+
+.header-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-links li {
+    list-style: none;
+}
+
+.header-links li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: var(--nav-link-font-weight);
+    padding: 1rem;
+    
+}
+
+.header-links li a:hover, .header-title:hover {
+    color: white;
+    
+}
+
+.toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-text-light);
+    border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+    .header-nav {
+        margin-bottom: 10rem;
+    }
+    
+    .toggle-button.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .toggle-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .toggle-button.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+
+    .toggle-button{
+        display: flex;
+    }
+    
+    .header-links {
+        display: none; 
+        position: absolute;
+        top: 70px;
+        right: 1rem;
+        width: 250px;
+        height: 190px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+    }
+
+    .header-nav {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .header-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-links li {
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-links li a {
+        padding: .5rem 1rem ;
+    }
+
+    .header-links.active {
+        display: flex;
+    }
+}
