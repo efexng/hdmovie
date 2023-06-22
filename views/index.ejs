@@ -1,2 +1,22 @@
-<h2 class="page-header"> Recently Added</h2>
-<%- include('partials/bookGrid', {books: books, large: true }) %> 
+<h2 class="page-header">Unlimited films, TV programmes and more</h2>
+<form action="/authors" method="GET" class="search-form">
+    <input type="text" name="name" placeholder="Search authors..." class="search-input"  autocomplete="off"> 
+    <button type="submit" class="search-button">Search</button>
+</form>
+<h2 class="page-header-sub">Enjoy on your TV</h2>
+<h2 class="page-header-sub1">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
+<%- include('partials/bookGrid', {books: books, medium: true }) %> 
+<h2 class="page-header-sub2">HDMOVIE offers an exceptional online movie and TV series streaming experience, setting itself apart as one of the best platforms available. Here are some key reasons why HDMOVIE stands out:</h2>
+<div class="page-header-sub3">
+    <ul>
+      <li>Minimal Advertisements: Enjoy uninterrupted streaming with no intrusive ads to disrupt your viewing pleasure.</li>
+      <li>Free and High-Speed Streaming: Experience fast streaming speeds without any charges, allowing you to immerse yourself in your favorite movies and TV shows effortlessly.</li>
+      <li>No Account Requirements: Start watching immediately without the hassle of creating an account or providing personal information.</li>
+      <li>Seamless One-Click Streaming: With a simple click, begin streaming your desired content instantly, saving you time and effort.</li>
+      <li>Extensive Library: Explore a vast collection of over 400,000 videos, ensuring that you have an extensive selection of movies and TV series to choose from.</li>
+    </ul>
+</div>
+<h2 class="page-header-sub2">If you're seeking a secure platform to watch movies online, give HDMOVIE a try. Don't forget to bookmark the site and share it with your friends if you find the service enjoyable.</h2>
+
+
+
