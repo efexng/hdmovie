@@ -5,6 +5,7 @@
     --form-input-border-color-light: hsl(var(--color-base-hue), 15%, 60%); 
 }
 
+
 .form-row {
     display: flex;
     margin-bottom: .5rem;
@@ -75,4 +76,28 @@
 .filepond--drop-label {
     color: var(--color-text-light);
     font-size: inherit;
+}
+
+
+@media (max-width: 767px) {
+.form-row {
+flex-wrap: wrap;
+margin-bottom: 1rem;
+}
+
+.form-item {
+margin-left: 0;
+margin-bottom: 1rem;
+flex-basis: 100%;
+}
+
+.form-row-end {
+justify-content: flex-end;
+margin-top: -25px;
+}
+
+.form-row .form-row-end{
+    content: "";
+    flex-grow: 1;
+}
 }
