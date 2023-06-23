@@ -1,22 +1,67 @@
 :root {
-    --book-cover-width: 200px;
-    --book-cover-width-large: 325px;
-    --book-cover-aspect-ratio: 0.75;
+    --book-cover-width: 155px;
+    --book-cover-width-large: 155px;
+    --book-cover-aspect-ratio: 0.607; 
 }
+
+.search-form-books {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    }
+
+
+.search-input-books {
+    padding: .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    width: 100%;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Gotham Rounded";
+    outline: none;
+}
+
+.search-button-books {
+    border: 1px solid var(--color-btn-border);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Gotham Rounded';
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+}
+
+.search-button-books:hover {
+    color: var(--color-btn-primary-text-dark);
+    background-color: var(--color-btn-primary-background-dark);
+}
+
+
 
 .book-cover {
     width: var(--book-cover-width);
-    height: calc(var(--book-cover-width) / var(--book-cover-width));
+    height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+    border-radius: 20px; 
+    margin-bottom: 30px;
 }
 
 .book-cover-large {
     --book-cover-width : var(--book-cover-width-large);
+    --book-cover-aspect-ratio: 0.607; 
 }
 
 .book-grid {
     display: grid;
     justify-content: center;
-    grid-gap: 2rem;
+    margin-top: 150px;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fill, var(--book-cover-width));
 }
 
@@ -55,3 +100,4 @@
     grid-area: author;
     justify-self: stretch;
 }
+

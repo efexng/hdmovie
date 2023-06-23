@@ -1,11 +1,18 @@
 <h2 class="page-header">Unlimited films, TV programmes and more</h2>
-<form action="/authors" method="GET" class="search-form">
-    <input type="text" name="name" placeholder="Search authors..." class="search-input"  autocomplete="off"> 
+<form action="/books" method="GET" class="search-form">
+    <input type="text" name="title" placeholder="Search movies..." class="search-input"  autocomplete="off"> 
     <button type="submit" class="search-button">Search</button>
 </form>
-<h2 class="page-header-sub">Enjoy on your TV</h2>
+<h2 class="page-header-sub">New Releases</h2>
 <h2 class="page-header-sub1">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
-<%- include('partials/bookGrid', {books: books, medium: true }) %> 
+<div class="image-grid ">
+  <img class="image" src="/images/antman.jpg" alt="" srcset="">
+  <img class="image" src="/images/BG.jpeg" alt="" srcset="">
+  <img class="image" src="/images/extraction2movie.png" alt="" srcset="">
+  <img class="image" src="/images/fastx.png" alt="" srcset="">
+  <img class="image" src="/images/johnwick4movie.png" alt="" srcset="">
+  <img class="image" src="/images/murdermystery2.png" alt="" srcset="">
+</div>
 <h2 class="page-header-sub2">HDMOVIE offers an exceptional online movie and TV series streaming experience, setting itself apart as one of the best platforms available. Here are some key reasons why HDMOVIE stands out:</h2>
 <div class="page-header-sub3">
     <ul>

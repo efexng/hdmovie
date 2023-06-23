@@ -1,25 +1,28 @@
-<h2 class="page-header">Search Books </h2>
-<form action="/books" method="GET">
-    <div class="form-row">
-        <div class="form-item">
-            <label>Title</label>
-            <input type="text" name="title" value="<%= searchOptions.title %>">
-        </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-item">
-        <label>Published After</label>
-        <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
-    </div>
-    <div class="form-item">
-        <label>Published Before</label>
-        <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
-    </div>
-</div>
-<div class="form-row form-row-end">
-        <button class="btn btn-primary" type="submit">Search</button>
-</div>
+<!-- <h2 class="page-header">Search Books </h2> -->
+<form action="/books" method="GET" class="search-form-books">
+        <input type="text" name="title" placeholder="Search movies..." class="search-input-books"  autocomplete="off"> 
+        <button type="submit" class="search-button-books">Search</button>
 </form>
-<br>
+<h2 class="page-header-sub4">Pupoolar movies</h2>
+
 <%- include('../partials/bookGrid', {books: books, large: true }) %> 
+
+
+<!-- 
+<div class="form-row">
+    <div class="form-item">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-item">
+    <label>Published After</label>
+    <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+</div>
+<div class="form-item">
+    <label>Published Before</label>
+    <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+</div>
+</div> -->

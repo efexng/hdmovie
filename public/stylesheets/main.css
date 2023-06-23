@@ -64,6 +64,7 @@ justify-content: center;
 margin-bottom: 1rem;
 }
 
+
 .search-input {
     padding: .5rem 1rem;
     border: 1px solid #ccc;
@@ -75,7 +76,7 @@ margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: normal;
     font-family: "Gotham Rounded";
-    outline: none
+    outline: none;
 }
 
 .search-button {
@@ -98,7 +99,7 @@ margin-bottom: 1rem;
 .page-header-sub2  {
     font-size: 24px;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
   }
   
@@ -112,4 +113,27 @@ margin-bottom: 1rem;
   .page-header-sub3 {
     font-size: 1rem;
     font-weight: 250;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.page-header-sub4 {
+    font-size: 2rem;
+    font-weight: 250;
+    margin-bottom: -50px;
+}
+
+.image {
+    width: var(--book-cover-width);
+    height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
+    border-radius: 20px; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.image-grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, var(--book-cover-width));
 }
